@@ -1,0 +1,148 @@
+/* Common styling for both sheets */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.row > b {
+    text-align: center;
+    padding: 10px 0;
+    min-width: 100px;
+    border: 1px solid #dfe4e9;
+    background-color: white;
+    text-align: center;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+/* Header styles */
+#header-1 {
+    display: flex;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 2; /* Fixed header above content */
+}
+
+#header-1 > div {
+    display: flex;
+    position: relative;
+    left: 102px;
+}
+
+#header-1 > div > b {
+    text-align: center;
+    padding: 10px 0;
+    min-width: 100px;
+    border: 1px solid #dfe4e9;
+    background-color: white;
+    text-align: center;
+}
+
+/* Style for other children (scrollable) */
+#header-1 > div > b:not(:first-child) {
+    overflow-y: auto; /* Enable vertical scrolling for other header cells */
+    max-height: 200px; /* Set a max height for vertical scrolling */
+}
+#header-1 > b:first-child {
+   
+    padding: 10px 0;
+    min-width: 100px;
+    border: 1px solid #dfe4e9;
+    background-color: white;
+    text-align: center;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+/* Body styles */
+main {
+    overflow: hidden;
+    position: relative;
+}
+
+#body-1 {
+    /* Adjust the height and width as needed */
+    height: 600px; /* Specify the desired height */
+    width: 100%; /* Occupy the full width */
+
+    /* Enable scrolling in both directions */
+    overflow-x: auto; /* Horizontal scroll */
+    overflow-y: auto; /* Vertical scroll */
+
+    /* Set a higher z-index to appear above header and options */
+    z-index: 0;
+}
+
+.row {
+    display: flex;
+}
+
+.row > div {
+    text-align: start;
+    padding: 10px 0;
+    min-width: 100px;
+    height: 20px;
+    overflow: hidden;
+    border: 1px solid #dfe4e9;
+}
+
+/* Optional: Adjust the padding or other styles as needed for your layout */
+
+/* Styling for selected cells */
+.selected {
+    background-color: lightblue;
+    color: white;
+}
+
+.highlight {
+    background-color: yellow;
+}
+
+/* Dropdown styling */
+#dropdown-content-1 {
+    position: fixed;
+    left: 68%;
+    z-index: 3;
+    top: 9%;
+}
+
+#dropdown-content-1 > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    background-color: azure;
+}
+
+/* Buttons styling */
+#buttons {
+    margin-top: 10px;
+}
+
+button {
+    width: 100px;
+    height: 50px;
+    border-radius: 12px;
+    font-size:16px;
+}
+
+/* Highlighted button */
+.highlighted {
+    background-color: gray;
+    color:white;
+}
+
+/* Sheet display */
+.sheet.active {
+    display: block;
+}
+
+.sheet {
+    display: none;
+}

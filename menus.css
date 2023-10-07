@@ -1,0 +1,99 @@
+.menus{
+   
+    display: flex;
+    justify-content: center;
+    gap:20px;
+    align-items: center;
+    width: 100%; 
+    background-color: #edf2fa;
+    margin-bottom: 10px;
+    
+}
+
+.active-options{
+    background-color: yellow;
+}
+
+.menus>div{
+    padding:10px;
+    cursor: pointer;
+    transition: 0.5s;
+    border-radius: 4px;
+}
+
+.menus>div:hover{
+    background-color: aliceblue;
+    
+}
+
+
+
+/* CSS for selected cells */
+
+  
+
+  .selected {
+    background-color: lightblue;
+    color: white;
+}
+
+
+
+
+.highlight {
+    background-color: yellow;
+}
+
+
+
+#dropdown-content-1{
+   
+    position: fixed;
+    left:68%;
+    z-index:3;
+    top:9%;
+}
+
+#dropdown-content-1>div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding:12px;
+    background-color: azure;
+}
+
+
+
+#buttons{
+    margin-top:10px;
+
+}
+
+#buttons>button{
+    width:80px;
+    height:30px;
+    border-radius: 12px;
+}
+
+
+
+
+
+
+
+
+
+.highlighted {
+    background-color: yellow;
+}
+
+.sheet.active {
+    display: block;
+}
+
+.sheet{
+    display: none;
+}
+
+
+

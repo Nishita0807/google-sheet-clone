@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sheet</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="menus.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+      <link rel="stylesheet" href="sheet.css">
+</head>
+<body>
+    <div id="options">
+     
+      
+      <div class="list">
+        <div>File</div>
+        <div>Edit</div>
+        <div>View</div>
+        <div>Insert</div>
+        <div>Format</div>
+        <div class="dropdown-parent">
+            <div class="dropdown-trigger" onclick="toggleDropdown()">Data</div>
+            <div class="dropdown-content">
+                <div onclick="sortData()" id="sort-button">Sort Sheet</div>
+                <div onclick="search()" id="search">Search</div>
+            </div>
+            <div id="s-input"><input type="text" onkeydown="handleEnter(event)" oninput="searchContent(this.value)"> 
+                
+            </div>
+          
+            
+        </div>
+        
+        <div>Tools</div>
+        <div>Extensions</div>
+        <div>Help</div>
+
+      </div>
+
+      <div class="menus">
+        <div id="bold" onclick="onClickBold(this)" >B</div>
+        <div id="italic" onclick="onClickItalic(this)">I</div>
+        <div id="underlined" onclick="onClickUnderlined(this)">U</div>
+        <div class="material-icons text-align active-options" data-value="start" onclick="onClickTextAlign(this)">
+            format_align_left
+            </div>
+            <div class="material-icons text-align" data-value="right" onclick="onClickTextAlign(this)">
+                format_align_right
+                </div>
+                <div class="material-icons text-align" data-value="center" onclick="onClickTextAlign(this)">
+                    format_align_center
+                    </div>
+                    <div id="text-color">
+                        <label for="color-picker">
+                            <div class="material-icons">
+                                format_color_text
+                                </div>
+                        </label>
+                        <input onchange="onChangeTextColor(this)" type="color" id="color-picker" style="width:0px;height:0px;display: none;" >
+                    </div>
+        
+                    <div id="bg-colorpicker">
+                        <label for="bgcolor-picker">
+                            <div class="material-icons">
+                                format_color_fill
+                                </div>
+                        </label>
+                        <input onchange="onChangeBgColor(this)" type="color" id="bgcolor-picker" style="width:0px;height:0px;display:none">
+                
+                </div>
+                <div><img src="./f.png" alt="" width="20px" height="20px"  onclick="toggleDropdown1()">
+                    
+                </div>
+                
+  </div>
+        <span id="active-cell">null</span>
+        <input type="text" id="form" style="width:300px;height:20px;"/>
+        <div id="dropdown-content-1" style="display: none;">
+            <div onclick="performAction('count')">Count</div>
+            <div onclick="performAction('max')">Max</div>
+            <div onclick="performAction('min')">Min</div>
+            <div onclick="performAction('average')">Average</div>
+            <div onclick="performAction('sum')">Sum</div>
+        </div>
+        <div style="margin-top:10px;">
+            <button id="sheet1Button" class="highlighted" onclick="navigateTo('sheet1')">Sheet 1</button>
+    <button id="sheet2Button" onclick="navigateTo('sheet2')">Sheet 2</button>
+
+        </div>
+    </div>
+    <div id="sheet1" class="sheet active">
+   
+            <div id="header">
+                <b>S No.</b>
+              </div>
+             
+              <section id="body"></section>
+    </div>
+    <div id="sheet2" class="sheet">
+        <div id="header-1">
+            <b>S No.</b>
+          </div>
+         
+          <section id="body-1"></section>
+    </div>
+    <div >
+   
+       
+</div>
+
+   
+    
+</body>
+<script src="options.js"></script>
+<script src="script.js"></script>
+
+<script src="sheet.js"></script>
+
+</html>
