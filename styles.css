@@ -167,7 +167,7 @@ overflow: hidden;
   
   #body {
     /* Adjust the height and width as needed */
-    height: 600px; /* Specify the desired height */
+    height: 300px; /* Specify the desired height */
     width: 100%; /* Occupy the full width */
   
     /* Enable scrolling in both directions */
